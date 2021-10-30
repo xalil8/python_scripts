@@ -1,7 +1,4 @@
-import easyocr
 import cv2
-import matplotlib.pyplot as plt
-import torch
 
 #path your video 
 video_path = "C:/Users/halil/Desktop/video_process/car_video.mp4"
