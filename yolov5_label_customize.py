@@ -1,7 +1,7 @@
 import os 
 import pandas as pd 
 
-with os.scandir("/Users/halil/Downloads/datas/labels/test") as files:  # from this dir , labels getting
+with os.scandir("/Users/halil/Desktop/final") as files:  # from this dir , labels getting
     counter = -1    #for naming txt files going  0 to n 
     for file in files:
         counter += 1
@@ -18,3 +18,13 @@ with os.scandir("/Users/halil/Downloads/datas/labels/test") as files:  # from th
                 x += i+" "
             new_file.write(x + '\n')  #writing lines 
         new_file.close()
+
+        
+        ////////////////////////////////////
+import os
+path = '/Users/halil/Desktop/dataset/images2'
+files = os.listdir(path)
+
+
+for index, file in enumerate(files):
+    os.rename(os.path.join(path, file), os.path.join(path, 'object'.join([str(index), '.png'])))
